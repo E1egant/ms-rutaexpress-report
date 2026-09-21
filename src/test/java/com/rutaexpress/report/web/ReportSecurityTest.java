@@ -13,7 +13,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
 /** Perfil `secure`: exige JWT y rol. Los tokens se simulan con jwt(). */
-@SpringBootTest(properties = {"AZURE_TENANT_ID=test-tenant", "AZURE_CLIENT_ID=test-client", "spring.kafka.listener.auto-startup=false"})
+@SpringBootTest(properties = {"AZURE_TENANT_ID=test-tenant", "AZURE_CLIENT_ID=test-client", "AZURE_API_AUDIENCE=api://test", "spring.kafka.listener.auto-startup=false"})
 @AutoConfigureMockMvc
 @ActiveProfiles("secure")
 class ReportSecurityTest {
