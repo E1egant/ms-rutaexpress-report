@@ -1,6 +1,7 @@
 package com.rutaexpress.report.web;
 
 import com.rutaexpress.contracts.ApiPaths;
+import com.rutaexpress.contracts.dto.KpiReportDto;
 import com.rutaexpress.report.service.ReportService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

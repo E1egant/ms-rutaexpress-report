@@ -1,8 +1,8 @@
 package com.rutaexpress.report.service;
 
 import com.rutaexpress.contracts.ShipmentStatus;
+import com.rutaexpress.contracts.dto.KpiReportDto;
 import com.rutaexpress.contracts.event.ShipmentEvent;
-import com.rutaexpress.report.web.KpiReportDto;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
