@@ -2,6 +2,7 @@ package com.rutaexpress.report.messaging;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.rutaexpress.contracts.MessagingConstants;
 import com.rutaexpress.contracts.event.ShipmentEvent;
 import com.rutaexpress.report.service.ReportService;
 import org.slf4j.Logger;
@@ -22,7 +23,7 @@ public class ShipmentEventConsumer {
         this.service = service;
     }
 
-    @KafkaListener(topics = "shipment-events", groupId = "report")
+    @KafkaListener(topics = MessagingConstants.SHIPMENT_EVENTS_TOPIC, groupId = "report")
     public void onEvent(String json) {
         try {
             ShipmentEvent event = objectMapper.readValue(json, ShipmentEvent.class);
