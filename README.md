@@ -21,7 +21,7 @@ Spring Boot 3.3.5, Java 17+, Maven (`./mvnw`). Puerto local: **8084**. Responsab
 
 ## Variables de entorno
 
-`AZURE_TENANT_ID`, `AZURE_API_AUDIENCE` (`api://<API_CLIENT_ID>`, perfil `secure`), KAFKA_BOOTSTRAP
+`AZURE_TENANT_ID`, `AZURE_API_AUDIENCE` (GUID de la API, `<API_CLIENT_ID>`; perfil `secure`), KAFKA_BOOTSTRAP
 
 ## Pruebas
 
@@ -32,7 +32,7 @@ Spring Boot 3.3.5, Java 17+, Maven (`./mvnw`). Puerto local: **8084**. Responsab
 ```bash
 ./mvnw test
 ./mvnw spring-boot:run
-SPRING_PROFILES_ACTIVE=secure AZURE_TENANT_ID=<tenant> AZURE_API_AUDIENCE=api://<api-client-id> ./mvnw spring-boot:run
+SPRING_PROFILES_ACTIVE=secure AZURE_TENANT_ID=<tenant> AZURE_API_AUDIENCE=<api-client-id> ./mvnw spring-boot:run
 ```
 
 Los DTOs compartidos están copiados en `src/main/java/com/rutaexpress/contracts`; la fuente de verdad de los contratos está en el repo `Cloud-Native-1` (`contratos/`).
